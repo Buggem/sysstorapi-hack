@@ -50,7 +50,7 @@ window.showSaveFilePicker=function(fileoptions) {
                             if(Object.prototype.toString.call(blob) == "[object Blob]")
                                 saveData(blob, savefileopt.suggestedName)
                             else
-                                saveData(new Blob(blob.isArray() ? blob : [blob]), savefileopt.suggestedName)
+                                saveData(new Blob(Array.isArray(blob) ? blob : [blob]), savefileopt.suggestedName)
                             resolve();
                         },
                         close:function(){},
