@@ -51,13 +51,14 @@ window.showSaveFilePicker=function(fileoptions) {
                             resolve();
                         },
                         close:function(){},
-                        getFile: function() {
-                            
-                            return new File(); // lol
-                        }
+                        
                     })
                     //fake the fake file handles fake writable
                 });
+            },
+            getFile: function() {
+                
+                return new File(); // lol
             }
         }) //fake the file handle
   });
