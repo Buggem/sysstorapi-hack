@@ -47,7 +47,10 @@ window.showSaveFilePicker=function(fileoptions) {
                                             window.URL.revokeObjectURL(url);
                                     
                             };
-                            saveData(blob, savefileopt.suggestedName)
+                            if(Object.prototype.toString.call(blob) == "[object Blob]")
+                                saveData(blob, savefileopt.suggestedName)
+                            else
+                                saveData(new Blob(blob.isArray() ? blob : [blob]), savefileopt.suggestedName)
                             resolve();
                         },
                         close:function(){},
