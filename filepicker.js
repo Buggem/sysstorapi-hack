@@ -58,7 +58,9 @@ window.showSaveFilePicker=function(fileoptions) {
             },
             getFile: function() {
                 
-                return new File(); // lol
+                return new File(["foo"], "foo.txt", {
+                  type: "text/plain",
+                }); // lol
             }
         }) //fake the file handle
   });
