@@ -1,3 +1,10 @@
+// sysstorapi-hack
+// v0.01 beta
+/*
+    * For more information and code, visit
+    * https://github.com/Buggem/sysstorapi-hack
+    */
+
 window.showOpenFilePicker = function(fileoptions) {
     console.log("here")
     window.openfileopt = fileoptions;
