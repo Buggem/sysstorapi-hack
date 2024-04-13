@@ -8,7 +8,7 @@
 var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 
 // Edge 20+
-var isEdge = !isIE && !!window.StyleMedia;
+var isEdge = !!window.StyleMedia;
 
 if (!isChrome && !isOpera && !isEdge) {
    window.showOpenFilePicker = function(fileoptions) {
